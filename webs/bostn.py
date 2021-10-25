@@ -76,19 +76,22 @@ def app():
 	st.write('---')
 
 
-
-	explainer = shap.TreeExplainer(model)
-	shap_values = explainer.shap_values(X)
-
-
-	st.header('Feature Importance')
-	plt.title('Feature importance based on SHAP values')
-	i = shap.summary_plot(shap_values, X)
-	st.pyplot(i, bbox_inches = 'tight')
-	st.write('---')
+	###################################################################
+	## Need to Fix the error when deploy to Heroku but local is fine ##
+	###################################################################	
+	
+	#explainer = shap.TreeExplainer(model)
+	#shap_values = explainer.shap_values(X)
 
 
+	#st.header('Feature Importance')
+	#plt.title('Feature importance based on SHAP values')
+	#i = shap.summary_plot(shap_values, X)
+	#st.pyplot(i, bbox_inches = 'tight')
+	#st.write('---')
 
-	plt.title('Feature importance based on SHAP values (Bar)')
-	i_1 = shap.summary_plot(shap_values, X, plot_type="bar")
-	st.pyplot(i_1, bbox_inches = 'tight')
+
+
+	#plt.title('Feature importance based on SHAP values (Bar)')
+	#i_1 = shap.summary_plot(shap_values, X, plot_type="bar")
+	#st.pyplot(i_1, bbox_inches = 'tight')
